@@ -13,7 +13,7 @@ class URLMapForm(FlaskForm):
                     URL(message='Это не ссылка')]
     )
     custom_id = StringField(
-        'Ваш вариант короткой ссылки', 
+        'Ваш вариант короткой ссылки',
         validators=[Length(1, 16), Optional(),
                     Regexp(regex=r'^[a-zA-Z\d]{1,16}$',
                            message='Только латиница и цифры')]
